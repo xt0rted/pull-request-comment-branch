@@ -1,0 +1,24 @@
+name: "Pull Request Comment Branch"
+
+description: "Gets the head ref and sha of a pull request comment"
+
+author: "xt0rted"
+
+branding:
+  icon: "message-square"
+  color: "white"
+
+inputs:
+  repo_token:
+    description: "The GITHUB_TOKEN secret"
+    required: true
+
+outputs:
+  ref:
+    description: "The head ref of the pull request the comment belongs to."
+  sha:
+    description: "The head sha of the pull request the comment belongs to."
+
+runs:
+  using: "node12"
+  main: "dist/index.js"

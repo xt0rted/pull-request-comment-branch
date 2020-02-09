@@ -1,0 +1,25 @@
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+indent_size = 4
+indent_style = space
+trim_trailing_whitespace = true
+
+[*.js]
+end_of_line = lf
+indent_size = 2
+
+[*.json]
+indent_size = 2
+
+[*.ts]
+end_of_line = lf
+indent_size = 2
+
+[*.yml]
+indent_size = 2
+
+[{package.json,package-lock.json}]
+end_of_line = lf

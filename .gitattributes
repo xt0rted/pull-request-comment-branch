@@ -1,0 +1,8 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+*.js text eol=lf
+*.ts text eol=lf
+
+package.json text eol=lf
+package-lock.json text eol=lf
