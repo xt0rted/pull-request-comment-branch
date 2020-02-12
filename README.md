@@ -1,5 +1,7 @@
 # Pull Request Comment Branch
 
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=xt0rted/pull-request-comment-branch)](https://dependabot.com)
+
 Get the head ref and sha of a pull request comment.
 
 Workflows for pull request comments are triggered using the [`issue_comment`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#issue-comment-event-issue_comment) event which runs for both issues and pull requests.
