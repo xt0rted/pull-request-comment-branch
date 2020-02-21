@@ -1,11 +1,9 @@
 import { getInput, setFailed, setOutput } from "@actions/core";
-import { context } from "@actions/github";
-import { Octokit } from "@octokit/rest";
+import { context, GitHub } from "@actions/github";
 
 export async function run() {
   try {
-    const token = getInput("repo_token", { required: true });
-    const client = new Octokit({ auth: `token ${token}` });
+    const client = new GitHub(getInput("repo_token", { required: true }));
 
     const { data: { pull_request } } = await client.issues.get({
       ...context.repo,
