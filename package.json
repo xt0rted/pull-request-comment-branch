@@ -24,7 +24,6 @@
     "@actions/github": "^2.1.1"
   },
   "devDependencies": {
-    "@octokit/rest": "^16.43.1",
     "@types/node": "^13.7.4",
     "@zeit/ncc": "^0.21.1",
     "typescript": "^3.7.2"
