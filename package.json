@@ -21,12 +21,11 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.0",
-    "@actions/github": "^2.1.0"
+    "@actions/github": "^2.1.1"
   },
   "devDependencies": {
-    "@octokit/rest": "^16.43.1",
-    "@types/node": "^13.7.0",
-    "@zeit/ncc": "^0.21.0",
-    "typescript": "^3.7.2"
+    "@types/node": "^13.7.4",
+    "@zeit/ncc": "^0.21.1",
+    "typescript": "^3.8.2"
   }
 }
