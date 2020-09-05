@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "Gets the head ref and sha of a pull request comment",
-  "main": "dist/index.js",
+  "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
-    "package": "ncc build src/main.ts",
+    "package": "ncc build --source-map --license license.txt",
     "release": "npm run package && git add -f dist/",
     "test": "tsc --noEmit"
   },
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@types/node": "^14.6.4",
-    "@zeit/ncc": "^0.22.3",
+    "@vercel/ncc": "^0.24.0",
     "typescript": "^3.9.7"
   }
 }
