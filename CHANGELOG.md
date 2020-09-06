@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Deprecated `ref` and `sha` outputs in favor of `head_ref` and `head_sha`.
+- Added `base_ref` and `base_sha` outputs
 - Bumped `@actions/core` from 1.2.2 to 1.2.5
 - Bumped `@actions/github` from 2.1.1 to 4.0.0
 
