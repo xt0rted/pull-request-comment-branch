@@ -14,13 +14,17 @@ export async function run() {
       throw Error("Comment is not on a pull request");
     }
 
-    const { data: { head: { ref, sha } } } = await client.pulls.get({
+    const { data: { head } } = await client.pulls.get({
       ...context.repo,
       pull_number: context.issue.number,
     });
 
-    setOutput("ref", ref);
-    setOutput("sha", sha);
+    setOutput("head_ref", head.ref);
+    setOutput("head_sha", head.sha);
+
+    // Deprecated
+    setOutput("ref", head.ref);
+    setOutput("sha", head.sha);
   } catch (error) {
     setFailed(error.message);
     throw error;

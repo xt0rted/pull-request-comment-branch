@@ -14,10 +14,15 @@ inputs:
     required: true
 
 outputs:
+  head_ref:
+    description: "The name of the pull request branch the comment belongs to."
+  head_sha:
+    description: "The head sha of the pull request branch the comment belongs to."
+# deprecated outputs
   ref:
-    description: "The head ref of the pull request the comment belongs to."
+    description: "Deprecated, use head_ref instead."
   sha:
-    description: "The head sha of the pull request the comment belongs to."
+    description: "Deprecated, use head_sha instead."
 
 runs:
   using: "node12"
