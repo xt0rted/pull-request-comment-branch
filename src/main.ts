@@ -1,32 +1,30 @@
 import { getInput, setFailed, setOutput } from "@actions/core";
-import { context, getOctokit } from "@actions/github";
+
+import { isPullRequest, pullRequestDetails } from "./PullRequests";
 
 export async function run() {
   try {
-    const client = getOctokit(getInput("repo_token", { required: true }));
+    const token = getInput("repo_token", { required: true });
 
-    const { data: { pull_request } } = await client.issues.get({
-      ...context.repo,
-      issue_number: context.issue.number,
-    });
-
-    if (!pull_request) {
+    if (!isPullRequest(token)) {
       throw Error("Comment is not on a pull request");
     }
 
-    const { data: { base, head } } = await client.pulls.get({
-      ...context.repo,
-      pull_number: context.issue.number,
-    });
+    const {
+      base_ref,
+      base_sha,
+      head_ref,
+      head_sha,
+    } = await pullRequestDetails(token);
 
-    setOutput("base_ref", base.ref);
-    setOutput("base_sha", base.sha);
-    setOutput("head_ref", head.ref);
-    setOutput("head_sha", head.sha);
+    setOutput("base_ref", base_ref);
+    setOutput("base_sha", base_sha);
+    setOutput("head_ref", head_ref);
+    setOutput("head_sha", head_sha);
 
     // Deprecated
-    setOutput("ref", head.ref);
-    setOutput("sha", head.sha);
+    setOutput("ref", head_ref);
+    setOutput("sha", head_sha);
   } catch (error) {
     setFailed(error.message);
     throw error;
