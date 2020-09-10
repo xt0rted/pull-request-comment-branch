@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v2
         if: success()
         with:
-          ref: ${{ steps.comment-branch.outputs.ref }}
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
 
       - run: git rev-parse --abbrev-ref HEAD
       - run: git rev-parse --verify HEAD
@@ -48,8 +48,12 @@ Name | Allowed values | Description
 
 Name | Decription
 -- | --
-`ref` | The name of the pull request branch the comment belongs to.
-`sha` | The head sha of the pull request branch the comment belongs to.
+`base_ref` | The name of the branch the pull request will merge into.
+`base_sha` | The head sha of the branch the pull request will merge into.
+`head_ref` | The name of the pull request branch the comment belongs to.
+`head_sha` | The head sha of the pull request branch the comment belongs to.
+`ref` | Deprecated, use `head_ref` instead.
+`sha` | Deprecated, use `head_sha` instead.
 
 ## License
 
