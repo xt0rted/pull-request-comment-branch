@@ -1,26 +1,30 @@
 import { getInput, setFailed, setOutput } from "@actions/core";
-import { context, GitHub } from "@actions/github";
+
+import { isPullRequest, pullRequestDetails } from "./PullRequests";
 
 export async function run() {
   try {
-    const client = new GitHub(getInput("repo_token", { required: true }));
+    const token = getInput("repo_token", { required: true });
 
-    const { data: { pull_request } } = await client.issues.get({
-      ...context.repo,
-      issue_number: context.issue.number,
-    });
-
-    if (!pull_request) {
+    if (!isPullRequest(token)) {
       throw Error("Comment is not on a pull request");
     }
 
-    const { data: { head: { ref, sha } } } = await client.pulls.get({
-      ...context.repo,
-      pull_number: context.issue.number,
-    });
+    const {
+      base_ref,
+      base_sha,
+      head_ref,
+      head_sha,
+    } = await pullRequestDetails(token);
 
-    setOutput("ref", ref);
-    setOutput("sha", sha);
+    setOutput("base_ref", base_ref);
+    setOutput("base_sha", base_sha);
+    setOutput("head_ref", head_ref);
+    setOutput("head_sha", head_sha);
+
+    // Deprecated
+    setOutput("ref", head_ref);
+    setOutput("sha", head_sha);
   } catch (error) {
     setFailed(error.message);
     throw error;

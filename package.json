@@ -1,12 +1,12 @@
 {
   "name": "pull-request-comment-branch",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "description": "Gets the head ref and sha of a pull request comment",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "package": "ncc build src/main.ts",
+    "package": "ncc build ./src/main.ts --source-map --license license.txt",
     "release": "npm run package && git add -f dist/",
     "test": "tsc --noEmit"
   },
@@ -20,12 +20,12 @@
   "author": "xt0rted",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/github": "^2.1.1"
+    "@actions/core": "^1.2.5",
+    "@actions/github": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^13.7.4",
-    "@zeit/ncc": "^0.21.1",
-    "typescript": "^3.8.2"
+    "@types/node": "^14.6.4",
+    "@vercel/ncc": "^0.24.0",
+    "typescript": "^4.0.2"
   }
 }
