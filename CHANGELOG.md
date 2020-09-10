@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version 1.2.0
 
 - Deprecated `ref` and `sha` outputs in favor of `head_ref` and `head_sha`.
 - Added `base_ref` and `base_sha` outputs

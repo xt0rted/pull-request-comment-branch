@@ -1,6 +1,6 @@
 {
   "name": "pull-request-comment-branch",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "description": "Gets the head ref and sha of a pull request comment",
   "main": "dist/index.js",
