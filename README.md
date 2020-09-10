@@ -22,7 +22,7 @@ jobs:
   pr-comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: xt0rted/pull-request-comment-branch@v1
+      - uses: xt0rted/pull-request-comment-branch@v1.2.0
         id: comment-branch
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
