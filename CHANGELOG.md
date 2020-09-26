@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Bumped `@actions/core` from 1.2.5 to 1.2.6
+
 ## Version 1.2.0
 
 - Deprecated `ref` and `sha` outputs in favor of `head_ref` and `head_sha`.
