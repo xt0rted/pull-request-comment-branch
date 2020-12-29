@@ -26,7 +26,8 @@ export async function run() {
     setOutput("ref", head_ref);
     setOutput("sha", head_sha);
   } catch (error) {
-    setFailed(error.message);
+    if (getInput("fail").toLowerCase() == 'true')
+      setFailed(error.message);
     throw error;
   }
 }
