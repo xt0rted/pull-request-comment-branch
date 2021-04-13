@@ -1,6 +1,6 @@
 # Pull Request Comment Branch
 
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=xt0rted/pull-request-comment-branch)](https://dependabot.com)
+[![CI](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml/badge.svg)](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml)
 
 Get the head ref and sha of a pull request comment.
 
