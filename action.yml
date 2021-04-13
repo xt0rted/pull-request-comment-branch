@@ -12,6 +12,10 @@ inputs:
   repo_token:
     description: "The GITHUB_TOKEN secret"
     required: true
+  fail:
+    default: 'true'
+    description: "Should the action fail if it is not a pull request"
+    required: false
 
 outputs:
   base_ref:

@@ -20,6 +20,8 @@ interface PullRequestDetailsResponse {
 }
 
 export async function isPullRequest(token: string) {
+  if (context.issue && !context.issue.number) return false
+
   const client = getOctokit(token);
 
   const { data: { pull_request } } = await client.issues.get({
