@@ -23,8 +23,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - run: npm ci
+      - run: yarn install
 
-      - run: npm test
+      - run: yarn test
 
-      - run: npm run build
+      - run: yarn run build
