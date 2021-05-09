@@ -27,4 +27,6 @@ jobs:
 
       - run: yarn test
 
-      - run: yarn run build
+      - run: yarn build
+
+      - run: yarn package
