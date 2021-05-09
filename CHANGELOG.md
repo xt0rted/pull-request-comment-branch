@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## Version 1.3.0
+
 - Bumped `@actions/core` from 1.2.5 to 1.2.7
 - Updated the `repo_token` input so it defaults to `GITHUB_TOKEN`. If you're already using this value you can remove this setting from your workflow.
 
