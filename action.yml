@@ -10,8 +10,9 @@ branding:
 
 inputs:
   repo_token:
-    description: "The GITHUB_TOKEN secret"
+    description: "GITHUB_TOKEN token or a repo scoped PAT"
     required: true
+    default: ${{ github.token }}
 
 outputs:
   base_ref:

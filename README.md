@@ -1,6 +1,6 @@
 # Pull Request Comment Branch
 
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=xt0rted/pull-request-comment-branch)](https://dependabot.com)
+[![CI](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml/badge.svg)](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml)
 
 Get the head ref and sha of a pull request comment.
 
@@ -16,7 +16,7 @@ With this action you'll be able to pass the ref to [`actions/checkout`](https://
 ```yml
 on:
   issue_comment:
-    types: created
+    types: [created]
 
 jobs:
   pr-comment:
@@ -24,8 +24,6 @@ jobs:
     steps:
       - uses: xt0rted/pull-request-comment-branch@v1
         id: comment-branch
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/checkout@v2
         if: success()
@@ -36,13 +34,45 @@ jobs:
       - run: git rev-parse --verify HEAD
 ```
 
+## Token Permissions
+
+If your repository is using [token permissions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#permissions) you'll need to set `contents: read` and `pull-request: read` on either the workflow or the job.
+
+### Workflow Config
+
+```yml
+on: issue_comment
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  pr-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: xt0rted/pull-request-comment-branch@v1
+```
+
+### Job Config
+
+```yml
+on: issue_comment
+jobs:
+  pr-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - uses: xt0rted/pull-request-comment-branch@v1
+```
+
 ## Options
 
 ### Required
 
 Name | Allowed values | Description
 -- | -- | --
-`repo_token` | `GITHUB_TOKEN` or a custom value | The token used to call the GitHub api.
+`repo_token` | `GITHUB_TOKEN` (default) or PAT | `GITHUB_TOKEN` token or a repo scoped PAT.
 
 ## Outputs
 

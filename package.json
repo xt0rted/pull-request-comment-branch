@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "package": "ncc build ./src/main.ts --source-map --license license.txt",
-    "release": "npm run package && git add -f dist/",
+    "release": "yarn package && git add -f dist/",
     "test": "tsc --noEmit"
   },
   "repository": {
@@ -20,12 +20,12 @@
   "author": "xt0rted",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.5",
+    "@actions/core": "^1.2.7",
     "@actions/github": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^14.6.4",
-    "@vercel/ncc": "^0.24.0",
-    "typescript": "^4.0.2"
+    "@types/node": "^15.0.2",
+    "@vercel/ncc": "^0.28.5",
+    "typescript": "^4.2.4"
   }
 }
