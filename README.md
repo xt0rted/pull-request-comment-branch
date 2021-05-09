@@ -24,8 +24,6 @@ jobs:
     steps:
       - uses: xt0rted/pull-request-comment-branch@v1
         id: comment-branch
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/checkout@v2
         if: success()
@@ -42,7 +40,7 @@ jobs:
 
 Name | Allowed values | Description
 -- | -- | --
-`repo_token` | `GITHUB_TOKEN` or a custom value | The token used to call the GitHub api.
+`repo_token` | `GITHUB_TOKEN` (default) or PAT | `GITHUB_TOKEN` token or a repo scoped PAT.
 
 ## Outputs
 
