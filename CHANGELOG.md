@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Bumped `@actions/core` from 1.2.7 to 1.6.0
+
 ## Version 1.3.0
 
 - Bumped `@actions/core` from 1.2.5 to 1.2.7
