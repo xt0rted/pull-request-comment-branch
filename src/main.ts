@@ -26,8 +26,11 @@ export async function run() {
     setOutput("ref", head_ref);
     setOutput("sha", head_sha);
   } catch (error) {
-    setFailed(error.message);
-    throw error;
+    if (error instanceof Error) {
+      setFailed(error.message);
+    } else {
+      throw error;
+    }
   }
 }
 
