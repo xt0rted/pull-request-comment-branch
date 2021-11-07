@@ -22,7 +22,7 @@ interface PullRequestDetailsResponse {
 export async function isPullRequest(token: string) {
   const client = getOctokit(token);
 
-  const { data: { pull_request } } = await client.issues.get({
+  const { data: { pull_request } } = await client.rest.issues.get({
     ...context.repo,
     issue_number: context.issue.number,
   });
