@@ -1,6 +1,8 @@
 # Pull Request Comment Branch
 
-[![CI](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml/badge.svg)](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml)
+[![CI](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/codeql-analysis.yml)
+
 
 Get the head ref and sha of a pull request comment.
 
