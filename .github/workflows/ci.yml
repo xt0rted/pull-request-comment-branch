@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.0.1
+        uses: actions/checkout@v3.0.2
 
       - name: Install node
         uses: actions/setup-node@v3.1.1
