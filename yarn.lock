@@ -146,10 +146,10 @@
   dependencies:
     "@octokit/openapi-types" "^11.2.0"
 
-"@types/node@^18.7.22":
-  version "18.7.22"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.22.tgz#76f7401362ad63d9d7eefa7dcdfa5fcd9baddff3"
-  integrity sha512-TsmoXYd4zrkkKjJB0URF/mTIKPl+kVcbqClB2F/ykU7vil1BfWZVndOnpEIozPv4fURD28gyPFeIkW2G+KXOvw==
+"@types/node@^18.8.0":
+  version "18.8.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.8.0.tgz#b8ee8d83a99470c0661bd899417fcd77060682fe"
+  integrity sha512-u+h43R6U8xXDt2vzUaVP3VwjjLyOJk6uEciZS8OSyziUQGOwmk+l+4drxcsDboHXwyTaqS1INebghmWMRxq3LA==
 
 "@vercel/ncc@^0.34.0":
   version "0.34.0"
