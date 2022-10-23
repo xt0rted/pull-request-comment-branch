@@ -10,13 +10,18 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  FORCE_COLOR: 3
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node: [16, 18]
+        node:
+          - 16
+          - 18
 
     steps:
       - name: Checkout repo
@@ -27,10 +32,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - run: yarn install
+      - run: npm ci
 
-      - run: yarn test
+      - run: npm run build
 
-      - run: yarn build
+      - run: npm test
 
-      - run: yarn package
+      - run: npm run package
