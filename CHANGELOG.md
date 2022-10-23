@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Updated node runtime from 12 to 16
+
 ## [1.4.0](https://github.com/xt0rted/pull-request-comment-branch/compare/v1.3.0...v1.4.0) - 2022-10-23
 
 - Bumped `@actions/core` from 1.2.7 to 1.10.0
