@@ -6,8 +6,10 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
+    "clean": "rimraf dist lib",
     "package": "ncc build ./src/main.ts --source-map --license license.txt",
-    "release": "yarn package && git add -f dist/",
+    "prerelease": "npm run clean",
+    "release": "npm run package && git add -f dist/",
     "test": "tsc --noEmit"
   },
   "repository": {
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@types/node": "^18.11.0",
     "@vercel/ncc": "^0.34.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.8.4"
   }
 }
