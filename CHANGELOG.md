@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Updated node runtime from 12 to 16
+- Removed deprecated `ref` and `sha` outputs. If you're using these then you should switch to `head_ref` and `head_sha` respectively.
 
 ## [1.4.0](https://github.com/xt0rted/pull-request-comment-branch/compare/v1.3.0...v1.4.0) - 2022-10-23
 
