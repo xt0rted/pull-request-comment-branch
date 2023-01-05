@@ -84,6 +84,8 @@ Name | Decription
 `base_sha` | The head sha of the branch the pull request will merge into.
 `head_ref` | The name of the pull request branch the comment belongs to.
 `head_sha` | The head sha of the pull request branch the comment belongs to.
+`head_owner` | The owner of the pull request branch the comment belongs to.
+`head_repo` | The repository of the pull request branch the comment belongs to.
 `ref` | Deprecated, use `head_ref` instead.
 `sha` | Deprecated, use `head_sha` instead.
 

@@ -15,12 +15,16 @@ export async function run() {
       base_sha,
       head_ref,
       head_sha,
+      head_repo,
+      head_owner,
     } = await pullRequestDetails(token);
 
     setOutput("base_ref", base_ref);
     setOutput("base_sha", base_sha);
     setOutput("head_ref", head_ref);
     setOutput("head_sha", head_sha);
+    setOutput("head_repo", head_repo);
+    setOutput("head_owner", head_owner);
 
     // Deprecated
     setOutput("ref", head_ref);
