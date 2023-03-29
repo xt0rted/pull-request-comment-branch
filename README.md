@@ -3,7 +3,6 @@
 [![CI](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/xt0rted/pull-request-comment-branch/actions/workflows/codeql-analysis.yml)
 
-
 Get the head ref and sha of a pull request comment.
 
 Workflows for pull request comments are triggered using the [`issue_comment`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#issue-comment-event-issue_comment) event which runs for both issues and pull requests.
@@ -24,7 +23,7 @@ jobs:
   pr-comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: xt0rted/pull-request-comment-branch@v1
+      - uses: xt0rted/pull-request-comment-branch@v2
         id: comment-branch
 
       - uses: actions/checkout@v2
@@ -51,7 +50,7 @@ jobs:
   pr-comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: xt0rted/pull-request-comment-branch@v1
+      - uses: xt0rted/pull-request-comment-branch@v2
 ```
 
 ### Job Config
@@ -65,7 +64,7 @@ jobs:
       contents: read
       pull-requests: read
     steps:
-      - uses: xt0rted/pull-request-comment-branch@v1
+      - uses: xt0rted/pull-request-comment-branch@v2
 ```
 
 ## Options
