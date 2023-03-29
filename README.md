@@ -10,7 +10,7 @@ Workflows for pull request comments are triggered using the [`issue_comment`](ht
 This action lets you filter your workflow to comments only on pull requests.
 It also gets the head ref and sha for the pull request branch which can be used later in the workflow.
 
-The pull request head ref and sha are important because `issue_comment` workflows run against the repository's `default` branch (usually `mater`) and not the pull request's branch.
+The pull request head ref and sha are important because `issue_comment` workflows run against the repository's `default` branch (usually `master`) and not the pull request's branch.
 With this action you'll be able to pass the ref to [`actions/checkout`](https://github.com/actions/checkout) and work with the pull request's code.
 
 ## Usage
