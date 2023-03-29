@@ -21,10 +21,6 @@ export async function run() {
     setOutput("base_sha", base_sha);
     setOutput("head_ref", head_ref);
     setOutput("head_sha", head_sha);
-
-    // Deprecated
-    setOutput("ref", head_ref);
-    setOutput("sha", head_sha);
   } catch (error) {
     if (error instanceof Error) {
       setFailed(error.message);
