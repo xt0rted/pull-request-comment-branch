@@ -4,13 +4,14 @@
   "private": true,
   "description": "Gets the head ref and sha of a pull request comment",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
     "clean": "rimraf dist lib",
+    "build": "tsc",
+    "lint": "tsc --noEmit",
     "package": "ncc build ./src/main.ts --source-map --license license.txt",
     "prerelease": "npm run clean",
-    "release": "npm run package && git add -f dist/",
-    "test": "tsc --noEmit"
+    "release": "npm run package && git add -f dist/"
   },
   "repository": {
     "type": "git",
