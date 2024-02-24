@@ -1,6 +1,6 @@
 import { getInput, setFailed, setOutput } from "@actions/core";
 
-import { isPullRequest, pullRequestDetails } from "./PullRequests";
+import { isPullRequest, pullRequestDetails } from "./PullRequests.js";
 
 export async function run() {
   try {

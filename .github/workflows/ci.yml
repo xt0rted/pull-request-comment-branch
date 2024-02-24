@@ -20,8 +20,8 @@ jobs:
     strategy:
       matrix:
         node:
-          - 16
-          - 18
+          - 20
+          - 21
 
     steps:
       - name: Checkout repo
@@ -34,8 +34,8 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build
+      - run: npm run lint
 
-      - run: npm test
+      - run: npm run build
 
       - run: npm run package
