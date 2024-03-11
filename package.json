@@ -29,6 +29,6 @@
     "@types/node": "^20.11.20",
     "@vercel/ncc": "^0.38.1",
     "rimraf": "^5.0.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   }
 }
