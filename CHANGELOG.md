@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [3.0.0](https://github.com/xt0rted/pull-request-comment-branch/compare/v2.0.0...v3.0.0) - 2024-11-19
+
 - Updated node runtime from 16 to 20
 - Bumped `@actions/core` from 1.10.0 to 1.11.1
 - Bumped `@actions/github` from 5.1.1 to 6.0.0
