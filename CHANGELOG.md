@@ -5,6 +5,7 @@
 - Updated node runtime from 16 to 20
 - Bumped `@actions/core` from 1.10.0 to 1.11.1
 - Bumped `@actions/github` from 5.1.1 to 6.0.0
+- Bumped `undici` from 5.28.3 to 5.28.4
 
 ## [2.0.0](https://github.com/xt0rted/pull-request-comment-branch/compare/v1.4.0...v2.0.0) - 2023-03-29
 
