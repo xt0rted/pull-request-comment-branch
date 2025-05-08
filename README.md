@@ -85,6 +85,7 @@ Name | Decription
 `base_sha` | The head sha of the branch the pull request will merge into.
 `head_ref` | The name of the pull request branch the comment belongs to.
 `head_sha` | The head sha of the pull request branch the comment belongs to.
+`merge_ref` | The refspec to the merged pull request.
 
 ## License
 
