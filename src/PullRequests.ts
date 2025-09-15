@@ -15,6 +15,12 @@ interface PullRequestDetailsResponse {
           oid: string;
         };
       };
+      headRepository: {
+        name: string;
+        owner: {
+          login: string;
+        };
+      };
     };
   };
 }
@@ -38,6 +44,7 @@ export async function pullRequestDetails(token: string) {
       pullRequest: {
         baseRef,
         headRef,
+        headRepository,
       },
     },
   } = await client.graphql<PullRequestDetailsResponse>(
@@ -57,6 +64,12 @@ export async function pullRequestDetails(token: string) {
                 oid
               }
             }
+            headRepository {
+              name
+              owner {
+                login
+              }
+            }
           }
         }
       }
@@ -72,5 +85,7 @@ export async function pullRequestDetails(token: string) {
     base_sha: baseRef.target.oid,
     head_ref: headRef.name,
     head_sha: headRef.target.oid,
+    head_repo: headRepository.name,
+    head_owner: headRepository.owner.login,
   };
 }
