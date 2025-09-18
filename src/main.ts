@@ -15,12 +15,14 @@ export async function run() {
       base_sha,
       head_ref,
       head_sha,
+      merge_ref,
     } = await pullRequestDetails(token);
 
     setOutput("base_ref", base_ref);
     setOutput("base_sha", base_sha);
     setOutput("head_ref", head_ref);
     setOutput("head_sha", head_sha);
+    setOutput("merge_ref", merge_ref);
   } catch (error) {
     if (error instanceof Error) {
       setFailed(error.message);
