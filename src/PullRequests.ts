@@ -3,7 +3,7 @@ import { context, getOctokit } from "@actions/github";
 interface PullRequestDetailsResponse {
   repository: {
     pullRequest: {
-      headRef: {
+      headRef?: {
         name: string;
         target: {
           oid: string;
@@ -70,7 +70,7 @@ export async function pullRequestDetails(token: string) {
   return {
     base_ref: baseRef.name,
     base_sha: baseRef.target.oid,
-    head_ref: headRef.name,
-    head_sha: headRef.target.oid,
+    head_ref: headRef?.name,
+    head_sha: headRef?.target.oid,
   };
 }
