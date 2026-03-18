@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## [4.0.0](https://github.com/xt0rted/pull-request-comment-branch/compare/v3.0.0...v4.0.0) - 2026-03-18
+
+- Updated node runtime from 20 to 24
+
 ## [3.0.0](https://github.com/xt0rted/pull-request-comment-branch/compare/v2.0.0...v3.0.0) - 2024-11-19
 
 - Updated node runtime from 16 to 20

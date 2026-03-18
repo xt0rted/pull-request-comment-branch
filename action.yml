@@ -25,5 +25,5 @@ outputs:
     description: "The head sha of the pull request branch the comment belongs to."
 
 runs:
-  using: "node20"
+  using: "node24"
   main: "dist/index.js"
